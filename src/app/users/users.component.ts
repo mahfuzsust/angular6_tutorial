@@ -6,18 +6,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 @Component({
 	selector: 'app-users',
 	templateUrl: './users.component.html',
-	styleUrls: ['./users.component.scss'],
-	// animations: [
-	// 	trigger('listStagger', [
-	// 		transition('* <=> *', [
-	// 			query(':enter', [
-	// 				style({ opacity: 0, transform: 'translateY(-15px)' }),
-	// 				stagger('50ms', animate('550 ease-out', style({ opacity: 1, transform: 'translateY(0px)'})))
-	// 			], {optional: true }),
-	// 			query(':leave', animate('50ms', style({opacity: 0})), {optional: true})
-	// 		])
-	// 	])
-	// ]
+	styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
 	users$: Object;
@@ -28,5 +17,4 @@ export class UsersComponent implements OnInit {
 			data => this.users$ = data 
 		);
 	}
-
 }
